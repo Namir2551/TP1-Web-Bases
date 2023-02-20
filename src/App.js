@@ -6,6 +6,7 @@ import {
   Redirect,
   Switch,
 } from "react-router-dom";
+import MainNavigation from "./shared/Navigation/MainNavigation"
 
 function App() {
   return (

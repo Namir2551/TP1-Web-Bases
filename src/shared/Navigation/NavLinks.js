@@ -6,16 +6,13 @@ import './NavLinks.css';
 function NavLinks(props) {
   return <ul className="nav-links">
     <li>
-      <NavLink to="/" exact>Tous les utilisateurs</NavLink>
+      <NavLink to="/" exact>Accueil</NavLink>
     </li>
     <li>
-      <NavLink to="/u1/places">Mes endroits</NavLink>
+      <NavLink to="/cours">Cours</NavLink>
     </li>
     <li>
-      <NavLink to="/places/new">Ajouter une place</NavLink>
-    </li>
-    <li>
-      <NavLink to="/auth">Authentification</NavLink>
+      <NavLink to="/professeurs">Professeurs</NavLink>
     </li>
   </ul>
 };
