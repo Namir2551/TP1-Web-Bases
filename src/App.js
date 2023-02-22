@@ -7,6 +7,7 @@ import {
   Switch,
 } from "react-router-dom";
 import MainNavigation from "./shared/Navigation/MainNavigation"
+import PageAccueil from "./places/pages/pageAccueil"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Switch>
           <Route path="/" exact>
+            <PageAccueil />
           </Route>
           <Route path="/cours" exact>
           </Route>
