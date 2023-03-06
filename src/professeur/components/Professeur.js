@@ -23,6 +23,8 @@ function Professeur({ professeur }) {
                   ))}
               </ul>
             </div>
+              
+
           </Link>
         </Card>
     </li>
