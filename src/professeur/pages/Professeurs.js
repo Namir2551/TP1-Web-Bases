@@ -7,13 +7,13 @@ function Professeurs() {
       id: "u1",
       nom: "Sylvain Labranche",
       image: "https://www.chumontreal.qc.ca/sites/default/files/guy-pare_5.jpeg",
-      places: 3,
+      cours: ["Premier", "Deuxieme"],
     },
     {
       id: "u2",
       nom: "Bleu Labranche",
       image: "https://www.chumontreal.qc.ca/sites/default/files/guy-pare_5.jpeg",
-      places: 4,
+      cours: ["Premier", "Deuxieme"],
     },
   ];
   return <ListeProfesseurs professeurs={professeurs} />;

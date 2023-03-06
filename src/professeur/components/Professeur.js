@@ -17,10 +17,11 @@ function Professeur({ professeur }) {
 
             <div className="user-item__info">
               <h2>{professeur.nom}</h2>
-              <h3>
-                {professeur.places}{" "}
-                {professeur.places < 2 ? "place" : "places"}
-              </h3>
+              <ul>
+                  {professeur.cours.map((cour) => (
+                    <li>{cour}</li>
+                  ))}
+              </ul>
             </div>
           </Link>
         </Card>
