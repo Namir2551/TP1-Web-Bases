@@ -1,0 +1,12 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:40%;
+  }
+
+p {
+    display: block;
+    text-align: center;
+    font-size: 40px; 
+}

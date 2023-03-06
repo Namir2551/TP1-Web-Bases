@@ -1,4 +1,5 @@
 import React from "react";
+import "./pageAccueil.css";
 
 function Place({ place }) {
     return (

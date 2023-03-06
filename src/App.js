@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import MainNavigation from "./shared/Navigation/MainNavigation"
 import PageAccueil from "./places/pages/pageAccueil"
+import Professeurs from './professeur/pages/Professeurs';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/cours" exact>
           </Route>
           <Route path="/professeurs" exact>
+            <Professeurs />
           </Route>
           <Redirect to="/" />
         </Switch>
