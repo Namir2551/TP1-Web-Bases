@@ -31,6 +31,13 @@ const FormulaireProf = ({ajouterProfesseur}) => {
       photo: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
       cours: [],
     };
+        if(saisieNom ==="" && saisiePrenom ===""){
+      alert("Vous devez saisir un Nom et Prenom")
+    }else if (saisieNom ===""){
+      alert("Vous devez saisir un Nom")
+    }else if(saisiePrenom ===""){
+      alert("Vous devez saisir un Prenom")
+    }
     ajouterProfesseur(donneesProf);
     setSaisieNom('');
     setSaisiePrenom('');
