@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ListeProfesseurs from "../components/ListeProfesseurs";
 import NouveauProf from "../nouveauProfesseur/NouveauProf";
 
 function Professeurs() {
-  const professeurs = [
+  const [professeurs, setProfesseurs] = useState([
     {
       id: "p1",
       dateEmbauche: new Date(2023, 5, 15),
@@ -20,10 +20,15 @@ function Professeurs() {
       photo: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
       cours: ["Premier", "Deuxieme"],
     },
-  ];
+  ]);
+
+  function ajouterProfesseur(nouveauProfesseur) {
+    setProfesseurs(professeurs.concat(nouveauProfesseur));
+  }
+
   return ( 
     <div>
-      <NouveauProf />
+      <NouveauProf ajouterProfesseur={ajouterProfesseur}/>
       <ListeProfesseurs professeurs={professeurs} />
     </div>
     );

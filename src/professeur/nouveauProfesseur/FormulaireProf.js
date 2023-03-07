@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './FormulaireProf.css';
 
-const FormulaireProf = (props) => {
+const FormulaireProf = ({ajouterProfesseur}) => {
   const [saisieNom, setSaisieNom] = useState('');
   const [saisiePrenom, setSaisiePrenom] = useState('');
   const [saisieDate, setSaisieDate] = useState('');
@@ -24,12 +24,14 @@ const FormulaireProf = (props) => {
     event.preventDefault();
 
     const donneesProf = {
+      id: "p3",
+      dateEmbauche: new Date(saisieDate),
       nom: saisieNom,
       prenom: saisiePrenom,
-      date: new Date(saisieDate),
+      photo: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
+      cours: [],
     };
-
-    props.onSaveExpenseData(donneesProf);
+    ajouterProfesseur(donneesProf);
     setSaisieNom('');
     setSaisiePrenom('');
     setSaisieDate('');
@@ -64,7 +66,7 @@ const FormulaireProf = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type="button" onClick={props.onCancel}>Annuler</button>
+        <button type="button" onClick={ajouterProfesseur.onCancel}>Annuler</button>
         <button type='submit'>Ajouter Prof</button>
       </div>
     </form>

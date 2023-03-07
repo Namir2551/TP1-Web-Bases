@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FormulaireProf from './FormulaireProf';
 import './NouveauProf.css';
 
-const NouveauProf = (props) => {
+const NouveauProf = ({ajouterProfesseur}) => {
   const [enEdition, setEnEdition] = useState(false);
 
   const enregistrerProfHandler = (profSaisie) => {
@@ -11,7 +11,7 @@ const NouveauProf = (props) => {
       ...profSaisie,
       id: Math.random().toString(),
     };
-    props.onAddExpense(donneesProf);
+    ajouterProfesseur.onAddExpense(donneesProf);
     setEnEdition(false);
   };
 
@@ -32,6 +32,7 @@ const NouveauProf = (props) => {
         <FormulaireProf
           onSaveExpenseData={enregistrerProfHandler}
           onCancel={arretEditionHandler}
+          ajouterProfesseur = {ajouterProfesseur}
         />
       )}
     </div>
