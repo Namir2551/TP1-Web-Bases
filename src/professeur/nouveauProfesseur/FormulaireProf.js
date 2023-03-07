@@ -28,7 +28,14 @@ const FormulaireProf = (props) => {
       prenom: saisiePrenom,
       date: new Date(saisieDate),
     };
-
+    
+    if(saisieNom ==="" && saisiePrenom ===""){
+      alert("Vous devez saisir un Nom et Prenom")
+    }else if (saisieNom ===""){
+      alert("Vous devez saisir un Nom")
+    }else if(saisiePrenom ===""){
+      alert("Vous devez saisir un Prenom")
+    }
     props.onSaveExpenseData(donneesProf);
     setSaisieNom('');
     setSaisiePrenom('');
