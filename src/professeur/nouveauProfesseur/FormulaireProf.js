@@ -28,7 +28,7 @@ const FormulaireProf = ({ajouterProfesseur}) => {
       dateEmbauche: new Date(saisieDate),
       nom: saisieNom,
       prenom: saisiePrenom,
-      photo: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
+      photo: "https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg",
       cours: [],
     };
         if(saisieNom ==="" && saisiePrenom ===""){
@@ -37,11 +37,12 @@ const FormulaireProf = ({ajouterProfesseur}) => {
       alert("Vous devez saisir un Nom")
     }else if(saisiePrenom ===""){
       alert("Vous devez saisir un Prenom")
+    } else {
+      ajouterProfesseur(donneesProf);
+      setSaisieNom('');
+      setSaisiePrenom('');
+      setSaisieDate('');
     }
-    ajouterProfesseur(donneesProf);
-    setSaisieNom('');
-    setSaisiePrenom('');
-    setSaisieDate('');
   };
 
   return (
