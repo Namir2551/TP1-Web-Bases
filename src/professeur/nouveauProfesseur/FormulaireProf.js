@@ -49,9 +49,7 @@ const FormulaireProf = (props) => {
         <div className='new-expense__control'>
           <label>Prenom</label>
           <input
-            type='number'
-            min='0.01'
-            step='0.01'
+            type='text'
             value={saisiePrenom}
             onChange={changementPrenomHandler}
           />
