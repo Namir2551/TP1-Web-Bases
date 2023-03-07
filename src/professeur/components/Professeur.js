@@ -12,19 +12,16 @@ function Professeur({ professeur }) {
         <Card className="user-item__content">
           <Link to={`/${professeur.id}/places`}>
             <div className="user-item__image">
-              <Avatar image={professeur.image} alt={professeur.nom} />
+              <Avatar photo={professeur.photo} alt={professeur.nom + ", " + professeur.prenom} />
             </div>
-
             <div className="user-item__info">
-              <h2>{professeur.nom}</h2>
+              <h2>{professeur.nom + ", " + professeur.prenom}</h2>
               <ul>
                   {professeur.cours.map((cour) => (
                     <li>{cour}</li>
                   ))}
               </ul>
             </div>
-              
-
           </Link>
         </Card>
     </li>

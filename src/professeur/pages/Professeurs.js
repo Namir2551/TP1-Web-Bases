@@ -1,22 +1,32 @@
 import React from "react";
 import ListeProfesseurs from "../components/ListeProfesseurs";
+import NouveauProf from "../nouveauProfesseur/NouveauProf";
 
 function Professeurs() {
   const professeurs = [
     {
-      id: "u1",
-      nom: "Micheal leduc",
-      image: "https://th.bing.com/th/id/OIP.kSzzGd_ab4PDPssnjbC7twHaGX?pid=ImgDet&rs=1",
+      id: "p1",
+      dateEmbauche: "3 février",
+      nom: "Leduc",
+      prenom: "Micheal",
+      photo: "https://th.bing.com/th/id/OIP.kSzzGd_ab4PDPssnjbC7twHaGX?pid=ImgDet&rs=1",
       cours: ["Premier", "Deuxieme"],
     },
     {
-      id: "u2",
-      nom: "Coco Delzozo",
-      image: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
+      id: "p2",
+      dateEmbauche: "3 février",
+      nom: "Delzozo",
+      prenom: "Coco",
+      photo: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
       cours: ["Premier", "Deuxieme"],
     },
   ];
-  return <ListeProfesseurs professeurs={professeurs} />;
-}
+  return ( 
+    <div>
+      <NouveauProf />
+      <ListeProfesseurs professeurs={professeurs} />
+    </div>
+    );
+};
 
 export default Professeurs;
