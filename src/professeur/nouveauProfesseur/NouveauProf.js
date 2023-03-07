@@ -26,7 +26,7 @@ const NouveauProf = (props) => {
   return (
     <div className='new-expense'>
       {!enEdition && (
-        <button onClick={debutEditionHandler}>Ajouter Nouveau prof</button>
+        <button onClick={debutEditionHandler}>Ajouter Nouveau Prof</button>
       )}
       {enEdition && (
         <FormulaireProf

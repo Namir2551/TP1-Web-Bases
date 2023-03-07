@@ -6,7 +6,7 @@ function Professeurs() {
   const professeurs = [
     {
       id: "p1",
-      dateEmbauche: "3 février",
+      dateEmbauche: new Date(2023, 5, 15),
       nom: "Leduc",
       prenom: "Micheal",
       photo: "https://th.bing.com/th/id/OIP.kSzzGd_ab4PDPssnjbC7twHaGX?pid=ImgDet&rs=1",
@@ -14,7 +14,7 @@ function Professeurs() {
     },
     {
       id: "p2",
-      dateEmbauche: "3 février",
+      dateEmbauche: new Date(2023, 7, 21),
       nom: "Delzozo",
       prenom: "Coco",
       photo: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
