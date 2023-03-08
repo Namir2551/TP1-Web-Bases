@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import FiltreSession from '../components/FiltreSession';
 import FormulaireCour from './FormulaireCour';
 import './NouveauCour.css';
 
@@ -35,6 +36,9 @@ const NouveauCour = ({ajouterCour}) => {
           ajouterCour = {ajouterCour}
         />
       )}
+      <FiltreSession>
+        selected={FiltreSession}
+      </FiltreSession>
     </div>
   );
 };
