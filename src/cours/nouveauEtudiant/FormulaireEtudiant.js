@@ -5,7 +5,7 @@ import './FormulaireEtudiant.css';
 const FormulaireEtudiant = (props) => {
   const [saisieNom, setSaisieNom] = useState('');
   const [saisiePrenom, setSaisiePrenom] = useState('');
-  const [saisieDate, setSaisieDate] = useState('');
+  const [saisieNumAdmission, setSaisieNumAdmission] = useState('');
 
 
   const changementNomHandler = (event) => {
@@ -16,8 +16,8 @@ const FormulaireEtudiant = (props) => {
     setSaisiePrenom(event.target.value);
   };
 
-  const changementDateHandler = (event) => {
-    setSaisieDate(event.target.value);
+  const changementNumAdmissionHandler = (event) => {
+    setSaisieNumAdmission(event.target.value);
   };
 
   const submitHandler = (event) => {
@@ -26,13 +26,13 @@ const FormulaireEtudiant = (props) => {
     const donneesEtudiant = {
       nom: saisieNom,
       prenom: saisiePrenom,
-      date: new Date(saisieDate),
+      numAdmission: saisieNumAdmission,
     };
 
     props.onSaveExpenseData(donneesEtudiant);
     setSaisieNom('');
     setSaisiePrenom('');
-    setSaisieDate('');
+    setSaisieNumAdmission('');
   };
 
   return (
@@ -55,11 +55,11 @@ const FormulaireEtudiant = (props) => {
           />
         </div>
         <div className='new-expense__control'>
-          <label>Date d'embauche</label>
+          <label>NumAdmission</label>
           <input
-            type='date'
-            value={saisieDate}
-            onChange={changementDateHandler}
+            type='text'
+            value={saisieNumAdmission}
+            onChange={changementNumAdmissionHandler}
           />
         </div>
       </div>

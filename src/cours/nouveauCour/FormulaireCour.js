@@ -3,63 +3,94 @@ import React, { useState } from 'react';
 import './FormulaireCour.css';
 
 const FormulaireCour = (ajouterCour) => {
-  const [saisieNom, setSaisieNom] = useState('');
-  const [saisiePrenom, setSaisiePrenom] = useState('');
-  const [saisieDate, setSaisieDate] = useState('');
+  const [saisieTitre, setSaisieTitre] = useState('');
+  const [saisieDiscipline, setSaisieDiscipline] = useState('');
+  const [saisieNbMax, setSaisieNbMax] = useState('');
+  const [saisieDateDebut, setSaisieDateDebut] = useState('');
+  const [saisieDateFin, setSaisieDateFin] = useState('');
 
 
-  const changementNomHandler = (event) => {
-    setSaisieNom(event.target.value);
+  const changementTitreHandler = (event) => {
+    setSaisieTitre(event.target.value);
   };
 
-  const changementPrenomHandler = (event) => {
-    setSaisiePrenom(event.target.value);
+  const changementDisciplineHandler = (event) => {
+    setSaisieDiscipline(event.target.value);
   };
 
-  const changementDateHandler = (event) => {
-    setSaisieDate(event.target.value);
+  const changementNbMaxHandler = (event) => {
+    setSaisieNbMax(event.target.value);
+  };
+
+  const changementDateDebutHandler = (event) => {
+    setSaisieDateDebut(event.target.value);
+  };
+
+  const changementDateFinHandler = (event) => {
+    setSaisieDateFin(event.target.value);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-
+    const id = Math.random().toString();
     const donneesCour = {
-      nom: saisieNom,
-      prenom: saisiePrenom,
-      date: new Date(saisieDate),
+      id: id,
+      titre: saisieTitre,
+      discipline: saisieDiscipline,
+      nbMaxEtu: saisieNbMax,
+      dateDebut: saisieDateDebut,
+      dateFin: saisieDateFin,
     };
 
     ajouterCour(donneesCour);
-    setSaisieNom('');
-    setSaisiePrenom('');
-    setSaisieDate('');
+    setSaisieTitre('');
+    setSaisieDiscipline('');
+    setSaisieNbMax('');
+    setSaisieDateDebut('');
+    setSaisieDateFin('');
   };
 
   return (
     <form onSubmit={submitHandler}>
       <div className='new-expense__controls'>
         <div className='new-expense__control'>
-          <label>Nom</label>
+          <label>Titre</label>
           <input
             type='text'
-            value={saisieNom}
-            onChange={changementNomHandler}
+            value={saisieTitre}
+            onChange={changementTitreHandler}
           />
         </div>
         <div className='new-expense__control'>
-          <label>Prenom</label>
+          <label>Discipline</label>
           <input
             type='text'
-            value={saisiePrenom}
-            onChange={changementPrenomHandler}
+            value={saisieDiscipline}
+            onChange={changementDisciplineHandler}
           />
         </div>
         <div className='new-expense__control'>
-          <label>Date d'embauche</label>
+          <label>Nombre d'étudiant maximum</label>
+          <input
+            type='digit'
+            value={saisieNbMax}
+            onChange={changementNbMaxHandler}
+          />
+        </div>
+        <div className='new-expense__control'>
+          <label>Date de début</label>
           <input
             type='date'
-            value={saisieDate}
-            onChange={changementDateHandler}
+            value={saisieDateDebut}
+            onChange={changementDateDebutHandler}
+          />
+        </div>
+        <div className='new-expense__control'>
+          <label>Date de fin</label>
+          <input
+            type='date'
+            value={saisieDateFin}
+            onChange={changementDateFinHandler}
           />
         </div>
       </div>
