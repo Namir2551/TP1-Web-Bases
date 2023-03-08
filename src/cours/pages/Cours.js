@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ListeCours from "../components/ListeCours";
 import NouveauCour from "../nouveauCour/NouveauCour";
 
 function Cours() {
@@ -28,6 +29,7 @@ function Cours() {
   return ( 
     <div>
       <NouveauCour ajouterCour = {ajouterCour}/>
+      <ListeCours cours={cours} />
     </div>
     );
 };
