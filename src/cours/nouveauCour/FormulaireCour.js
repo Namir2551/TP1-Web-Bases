@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-
 import './FormulaireCour.css';
 
-const FormulaireCour = (ajouterCour) => {
+const FormulaireCour = ({ajouterCour}) => {
   const [saisieTitre, setSaisieTitre] = useState('');
   const [saisieDiscipline, setSaisieDiscipline] = useState('');
   const [saisieNbMax, setSaisieNbMax] = useState('');
@@ -38,8 +37,8 @@ const FormulaireCour = (ajouterCour) => {
       titre: saisieTitre,
       discipline: saisieDiscipline,
       nbMaxEtu: saisieNbMax,
-      dateDebut: saisieDateDebut,
-      dateFin: saisieDateFin,
+      dateDebut: new Date(saisieDateDebut),
+      dateFin: new Date(saisieDateFin),
     };
 
     ajouterCour(donneesCour);
@@ -72,7 +71,7 @@ const FormulaireCour = (ajouterCour) => {
         <div className='new-expense__control'>
           <label>Nombre d'étudiant maximum</label>
           <input
-            type='digit'
+            type='text'
             value={saisieNbMax}
             onChange={changementNbMaxHandler}
           />

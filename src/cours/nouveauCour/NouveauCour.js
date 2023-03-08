@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FormulaireCour from './FormulaireCour';
 import './NouveauCour.css';
 
-const NouveauCour = (ajouterCour) => {
+const NouveauCour = ({ajouterCour}) => {
   const [enEdition, setEnEdition] = useState(false);
 
   const enregistrerCourHandler = (courSaisie) => {
