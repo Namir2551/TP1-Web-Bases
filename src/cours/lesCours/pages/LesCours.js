@@ -1,35 +1,60 @@
 import React, { useState } from "react";
 import NouveauEtudiant from "../nouveauEtudiant/NouveauEtudiant";
 
-function Cours() {
-    const [cours, setCours] = useState([
+function LesCours() {
+    const [lesEtudiants, setLesEtudiants] = useState([
       {
-        id: "c1",
-        titre: "Objet Connectée",
-        discipline: "Technologie",
-        nbMaxEtu: "30",
-        dateDebut: new Date(2023, 1, 22),
-        dateFin: new Date(2023, 5, 27),
+        nom: "Giguère",
+        prenom: "Guillaume",
+        numAdmission: "1",
       },
       {
-        id: "c2",
-        titre: "Web et base de donnée",
-        discipline: "Technologie",
-        nbMaxEtu: "30",
-        dateDebut: new Date(2023, 1, 23),
-        dateFin: new Date(2023, 5, 25),
+        nom: "Kas Nasrallah",
+        prenom: "Namir",
+        numAdmission: "2",
+      },
+      {
+        nom: "Giguère",
+        prenom: "Gabriel",
+        numAdmission: "3",
+      },
+      {
+        nom: "Luc",
+        prenom: "Jean",
+        numAdmission: "4",
+      },
+      {
+        nom: "Armend",
+        prenom: "Christophe",
+        numAdmission: "5",
+      },
+      {
+        nom: "pot",
+        prenom: "Emanuelle",
+        numAdmission: "6",
+      },
+      {
+        nom: "Gort",
+        prenom: "Nadia",
+        numAdmission: "7",
+      },
+      {
+        nom: "Tremblay",
+        prenom: "Noémie",
+        numAdmission: "8",
       },
     ]);
   
-    function ajouterCour(nouveauCour) {
-      setCours(cours.concat(nouveauCour));
-    }
-
   return ( 
     <div>
-      <NouveauEtudiant ajouterCour = {ajouterCour}/>
+        <NouveauEtudiant/>
+        <ul>
+            {lesEtudiants.map((etu) => (
+                <li>{etu.prenom + " " + etu.nom} </li>
+            ))}
+        </ul>
     </div>
     );
 };
 
-export default Cours;
+export default LesCours;
