@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
-import FormulaireEtudiant from './FormulaireEtudiant';
-import './NouveauEtudiant.css';
+import FormulaireCour from './FormulaireCour';
+import './NouveauCour.css';
 
-const NouveauEtudiant = (props) => {
+const NouveauCour = (ajouterCour) => {
   const [enEdition, setEnEdition] = useState(false);
 
-  const enregistrerEtudiantHandler = (etudiantSaisie) => {
-    const donneesEtudiant = {
-      ...etudiantSaisie,
+  const enregistrerCourHandler = (courSaisie) => {
+    const donneesCour = {
+      ...courSaisie,
       id: Math.random().toString(),
     };
-    props.onAddExpense(donneesEtudiant);
+    ajouterCour.onAddExpense(donneesCour);
     setEnEdition(false);
   };
 
@@ -26,16 +26,17 @@ const NouveauEtudiant = (props) => {
   return (
     <div className='new-expense'>
       {!enEdition && (
-        <button onClick={debutEditionHandler}>Ajouter Nouveau Etudiant</button>
+        <button onClick={debutEditionHandler}>Ajouter Nouveau Cour</button>
       )}
       {enEdition && (
-        <FormulaireEtudiant
-          onSaveExpenseData={enregistrerEtudiantHandler}
+        <FormulaireCour
+          onSaveExpenseData={enregistrerCourHandler}
           onCancel={arretEditionHandler}
+          ajouterCour = {ajouterCour}
         />
       )}
     </div>
   );
 };
 
-export default NouveauEtudiant;
+export default NouveauCour;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import './FormulaireEtudiant.css';
+import './FormulaireCour.css';
 
-const FormulaireEtudiant = (props) => {
+const FormulaireCour = (ajouterCour) => {
   const [saisieNom, setSaisieNom] = useState('');
   const [saisiePrenom, setSaisiePrenom] = useState('');
   const [saisieDate, setSaisieDate] = useState('');
@@ -23,13 +23,13 @@ const FormulaireEtudiant = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const donneesEtudiant = {
+    const donneesCour = {
       nom: saisieNom,
       prenom: saisiePrenom,
       date: new Date(saisieDate),
     };
 
-    props.onSaveExpenseData(donneesEtudiant);
+    ajouterCour(donneesCour);
     setSaisieNom('');
     setSaisiePrenom('');
     setSaisieDate('');
@@ -64,11 +64,11 @@ const FormulaireEtudiant = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type="button" onClick={props.onCancel}>Annuler</button>
-        <button type='submit'>Ajouter Etudiant</button>
+        <button type="button" onClick={ajouterCour.onCancel}>Annuler</button>
+        <button type='submit'>Ajouter Cour</button>
       </div>
     </form>
   );
 };
 
-export default FormulaireEtudiant;
+export default FormulaireCour;
