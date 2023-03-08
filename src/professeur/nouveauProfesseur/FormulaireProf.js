@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Professeurs from '../pages/Professeurs';
 import './FormulaireProf.css';
 
 const FormulaireProf = ({ajouterProfesseur}) => {
