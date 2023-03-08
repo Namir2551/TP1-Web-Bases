@@ -81,6 +81,8 @@ const FormulaireCour = ({ajouterCour}) => {
           <input
             type='date'
             value={saisieDateDebut}
+            min='2023-01-01'
+            max='2023-06-06'
             onChange={changementDateDebutHandler}
           />
         </div>
@@ -89,6 +91,8 @@ const FormulaireCour = ({ajouterCour}) => {
           <input
             type='date'
             value={saisieDateFin}
+            min='2023-01-01'
+            max='2023-06-06'
             onChange={changementDateFinHandler}
           />
         </div>

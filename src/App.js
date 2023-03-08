@@ -10,6 +10,7 @@ import MainNavigation from "./shared/Navigation/MainNavigation"
 import PageAccueil from "./acceuil/pages/pageAccueil"
 import Professeurs from './professeur/pages/Professeurs';
 import Cours from "./cours/pages/Cours";
+import LesCours from "./cours/lesCours/pages/LesCours"
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/cours" exact>
             <Cours />
+          </Route>
+          <Route path="/cours/:coursId" exact>
+            <LesCours />
           </Route>
           <Route path="/professeurs" exact>
             <Professeurs />
