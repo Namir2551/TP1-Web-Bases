@@ -27,7 +27,7 @@ const NouveauCour = ({ajouterCour}) => {
   return (
     <div className='new-expense'>
       {!enEdition && (
-        <button onClick={debutEditionHandler}>Ajouter Nouveau Cour</button>
+        <button onClick={debutEditionHandler}>Ajouter Nouveau Cours</button>
       )}
       {enEdition && (
         <FormulaireCour
