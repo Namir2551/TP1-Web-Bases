@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Professeurs from '../pages/Professeurs';
-import './FormulaireProf.css';
 
-const FormulaireProf = ({ajouterProfesseur}) => {
+import './FormulaireEtudiant.css';
+
+const FormulaireEtudiant = (props) => {
   const [saisieNom, setSaisieNom] = useState('');
   const [saisiePrenom, setSaisiePrenom] = useState('');
   const [saisieDate, setSaisieDate] = useState('');
@@ -22,29 +22,17 @@ const FormulaireProf = ({ajouterProfesseur}) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const id = Math.random().toString();
-    const donneesProf = {
-      id: id,
-      dateEmbauche: new Date(saisieDate),
+
+    const donneesEtudiant = {
       nom: saisieNom,
       prenom: saisiePrenom,
-      photo: "https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg",
-      cours: [],
+      date: new Date(saisieDate),
     };
-        if(saisieNom ==="" && saisiePrenom ===""){
-      alert("Vous devez saisir un Nom et Prenom")
-    }else if (saisieNom ===""){
-      alert("Vous devez saisir un Nom")
-    }else if(saisiePrenom ===""){
-      alert("Vous devez saisir un Prenom")
-    }else if(saisieDate ===""){
-      alert("Vous devez saisir une Date")
-    } else {
-      ajouterProfesseur(donneesProf);
-      setSaisieNom('');
-      setSaisiePrenom('');
-      setSaisieDate('');
-    }
+
+    props.onSaveExpenseData(donneesEtudiant);
+    setSaisieNom('');
+    setSaisiePrenom('');
+    setSaisieDate('');
   };
 
   return (
@@ -76,11 +64,11 @@ const FormulaireProf = ({ajouterProfesseur}) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type="button" onClick={ajouterProfesseur.onCancel}>Annuler</button>
-        <button type='submit'>Ajouter Prof</button>
+        <button type="button" onClick={props.onCancel}>Annuler</button>
+        <button type='submit'>Ajouter Etudiant</button>
       </div>
     </form>
   );
 };
 
-export default FormulaireProf;
+export default FormulaireEtudiant;

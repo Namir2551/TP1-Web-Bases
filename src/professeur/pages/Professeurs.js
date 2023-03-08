@@ -18,7 +18,7 @@ function Professeurs() {
       nom: "Delzozo",
       prenom: "Coco",
       photo: "https://4.bp.blogspot.com/-oX5MCM16YoQ/Wh8RrLwG4EI/AAAAAAABNUg/QltezsjmUHEACRGjct7MG12JFRvMX38qwCKgBGAs/s1600/CastleCreator_Fluttershy5.png",
-      cours: ["Premier", "Deuxieme"],
+      cours: ["1", "2"],
     },
   ]);
 
