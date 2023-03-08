@@ -48,6 +48,7 @@ function LesCours() {
   return ( 
     <div>
         <NouveauEtudiant/>
+        <h2>Les étudiants</h2>
         <ul>
             {lesEtudiants.map((etu) => (
                 <li>{etu.prenom + " " + etu.nom} </li>
