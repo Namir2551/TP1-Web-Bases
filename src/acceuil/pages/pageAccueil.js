@@ -8,9 +8,16 @@ function Acceuil() {
                 alt="Collège MontMorency">
             </img>
             <br></br>
-            <p>Le site permet de gérer les inscriptions du collège.</p>
-            <p>Vous pouvez voir les professeurs du collège ou vous inscrire comme tel dans l'onglet Professeurs.</p>
-            <p>Vous pouvez voir les cours du collège ou rajouter des étudiants dans l'onglet Cours.</p>
+            <section>
+                <p>Le site permet de gérer les inscriptions du collège.</p>
+                <p>Vous pouvez voir les professeurs du collège ou vous inscrire comme tel dans l'onglet Professeurs.</p>
+                <p>Vous pouvez voir les cours du collège ou rajouter des étudiants dans l'onglet Cours.</p>
+            </section>
+            <footer>
+                <p>&copy; Copyright - Namir Kas Nasrallah - Guillaume Giguère - Ali Tebbal</p>
+            </footer>
+            
+    
         </div>
     );
   }
