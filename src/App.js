@@ -11,6 +11,7 @@ import PageAccueil from "./acceuil/pages/pageAccueil"
 import Professeurs from './professeur/pages/Professeurs';
 import Cours from "./cours/pages/Cours";
 import LesCours from "./cours/lesCours/pages/LesCours"
+import Footer from './shared/Footer';
 
 function App() {
   return (
@@ -32,9 +33,7 @@ function App() {
           </Route>
           <Redirect to="/" />
         </Switch>
-        <footer>
-                <p>&copy; Copyright - Namir Kas Nasrallah - Guillaume Giguère - Ali Tebbal</p>
-        </footer>
+        <Footer />
       </main>
     </Router>
     
