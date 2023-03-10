@@ -10,7 +10,7 @@ const FiltreSession = (props) => {
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
-        <label>Filtrer par année</label>
+        <label>Filtrer par sessions</label>
         <select value={props.selected} onChange={menuDeroulantHandler}>
           <option value='H23'>Hiver 2023</option>
           <option value='A22'>Automne 2022</option>

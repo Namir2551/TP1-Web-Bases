@@ -32,8 +32,12 @@ function App() {
           </Route>
           <Redirect to="/" />
         </Switch>
+        <footer>
+                <p>&copy; Copyright - Namir Kas Nasrallah - Guillaume Giguère - Ali Tebbal</p>
+        </footer>
       </main>
     </Router>
+    
   );
 }
 
