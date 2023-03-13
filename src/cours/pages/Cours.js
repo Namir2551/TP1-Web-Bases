@@ -11,6 +11,7 @@ function Cours() {
         nbMaxEtu: "30",
         dateDebut: new Date(2023, 1, 22),
         dateFin: new Date(2023, 5, 27),
+        session: "H22"
       },
       {
         id: "c2",
@@ -19,6 +20,7 @@ function Cours() {
         nbMaxEtu: "30",
         dateDebut: new Date(2023, 1, 23),
         dateFin: new Date(2023, 5, 25),
+        session: "H22"
       },
     ]);
   
@@ -28,8 +30,10 @@ function Cours() {
 
   return ( 
     <div>
-      <NouveauCour ajouterCour = {ajouterCour}/>
-      <ListeCours cours={cours} />
+      <NouveauCour 
+        ajouterCour = {ajouterCour}
+        cours={cours}
+      />
     </div>
     );
 };

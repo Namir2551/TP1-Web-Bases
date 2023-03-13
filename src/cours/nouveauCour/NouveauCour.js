@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 import FiltreSession from '../components/FiltreSession';
 import FormulaireCour from './FormulaireCour';
+import ListeCours from '../components/ListeCours';
 import './NouveauCour.css';
 
-const NouveauCour = ({ajouterCour}) => {
+const NouveauCour = ({ajouterCour, cours}) => {
   const [enEdition, setEnEdition] = useState(false);
 
   const ouvrirFormulaireHandler = () => {
@@ -21,6 +22,10 @@ const NouveauCour = ({ajouterCour}) => {
     setFiltreAnnee(selectedAnnee);
   };
 
+  const anneeFiltrees = cours.filter((cour) => {
+    return cour.session === filtreAnnee;
+  });
+
   return (
     <div className='new-expense'>
       {!enEdition && (
@@ -35,6 +40,9 @@ const NouveauCour = ({ajouterCour}) => {
       <FiltreSession
         selected = {filtreAnnee}
         onChangementFiltre = {filtrerChangeHandler}
+      />
+      <ListeCours 
+        cours={anneeFiltrees}
       />
     </div>
   );
