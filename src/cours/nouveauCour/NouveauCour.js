@@ -16,7 +16,7 @@ const NouveauCour = ({ajouterCour, cours}) => {
     setEnEdition(false);
   };
 
-  const [filtreAnnee, setFiltreAnnee] = useState();
+  const [filtreAnnee, setFiltreAnnee] = useState("H23");
 
   const filtrerChangeHandler = (selectedAnnee) => {
     setFiltreAnnee(selectedAnnee);

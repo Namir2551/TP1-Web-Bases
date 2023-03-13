@@ -22,6 +22,15 @@ function Cours() {
         dateFin: new Date(2023, 5, 25),
         session: "H22"
       },
+      {
+        id: "c3",
+        titre: "Analyse et conception de diagramme UML",
+        discipline: "Technologie",
+        nbMaxEtu: "30",
+        dateDebut: new Date(2023, 1, 22),
+        dateFin: new Date(2023, 5, 24),
+        session: "A21"
+      },
     ]);
   
     function ajouterCour(nouveauCour) {
