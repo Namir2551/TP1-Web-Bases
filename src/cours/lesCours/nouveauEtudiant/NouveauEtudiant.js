@@ -6,32 +6,22 @@ import './NouveauEtudiant.css';
 const NouveauEtudiant = (props) => {
   const [enEdition, setEnEdition] = useState(false);
 
-  const enregistrerEtudiantHandler = (etudiantSaisie) => {
-    const donneesEtudiant = {
-      ...etudiantSaisie,
-      id: Math.random().toString(),
-    };
-    props.onAddExpense(donneesEtudiant);
-    setEnEdition(false);
-  };
-
-  const debutEditionHandler = () => {
+  const ouvrirFormulaireHandler = () => {
     setEnEdition(true);
   };
 
-  const arretEditionHandler = () => {
+  const fermerFormulaireHandler = () => {
     setEnEdition(false);
   };
 
   return (
     <div className='new-expense'>
       {!enEdition && (
-        <button onClick={debutEditionHandler}>Ajouter Nouveau Etudiant</button>
+        <button onClick={ouvrirFormulaireHandler}>Ajouter Nouveau Etudiant</button>
       )}
       {enEdition && (
         <FormulaireEtudiant
-          onSaveExpenseData={enregistrerEtudiantHandler}
-          onCancel={arretEditionHandler}
+          onCancel={fermerFormulaireHandler}
         />
       )}
     </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './FormulaireEtudiant.css';
 
-const FormulaireEtudiant = (props) => {
+const FormulaireEtudiant = ({onCancel}) => {
   const [saisieNom, setSaisieNom] = useState('');
   const [saisiePrenom, setSaisiePrenom] = useState('');
   const [saisieNumAdmission, setSaisieNumAdmission] = useState('');
@@ -28,8 +28,6 @@ const FormulaireEtudiant = (props) => {
       prenom: saisiePrenom,
       numAdmission: saisieNumAdmission,
     };
-
-    props.onSaveExpenseData(donneesEtudiant);
     setSaisieNom('');
     setSaisiePrenom('');
     setSaisieNumAdmission('');
@@ -64,7 +62,7 @@ const FormulaireEtudiant = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type="button" onClick={props.onCancel}>Annuler</button>
+        <button type="button" onClick={onCancel}>Annuler</button>
         <button type='submit'>Ajouter Etudiant</button>
       </div>
     </form>

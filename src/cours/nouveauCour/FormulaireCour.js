@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './FormulaireCour.css';
 
-const FormulaireCour = ({ajouterCour}) => {
+const FormulaireCour = ({onCancel, ajouterCour}) => {
   const [saisieTitre, setSaisieTitre] = useState('');
   const [saisieDiscipline, setSaisieDiscipline] = useState('');
   const [saisieNbMax, setSaisieNbMax] = useState('');
@@ -110,7 +110,7 @@ const FormulaireCour = ({ajouterCour}) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type="button" onClick={ajouterCour.onCancel}>Annuler</button>
+        <button type="button" onClick={onCancel}>Annuler</button>
         <button type='submit'>Ajouter Cour</button>
       </div>
     </form>

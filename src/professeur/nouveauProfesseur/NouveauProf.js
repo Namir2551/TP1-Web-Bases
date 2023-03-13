@@ -6,32 +6,22 @@ import './NouveauProf.css';
 const NouveauProf = ({ajouterProfesseur}) => {
   const [enEdition, setEnEdition] = useState(false);
 
-  const enregistrerProfHandler = (profSaisie) => {
-    const donneesProf = {
-      ...profSaisie,
-      id: Math.random().toString(),
-    };
-    ajouterProfesseur.onAddExpense(donneesProf);
-    setEnEdition(false);
-  };
-
-  const debutEditionHandler = () => {
+  const ouvrirFormulaireHandler = () => {
     setEnEdition(true);
   };
 
-  const arretEditionHandler = () => {
+  const fermerFormulaireHandler = () => {
     setEnEdition(false);
   };
 
   return (
     <div className='new-expense'>
       {!enEdition && (
-        <button onClick={debutEditionHandler}>Ajouter un nouveau professeur</button>
+        <button onClick={ouvrirFormulaireHandler}>Ajouter un nouveau professeur</button>
       )}
       {enEdition && (
         <FormulaireProf
-          onSaveExpenseData={enregistrerProfHandler}
-          onCancel={arretEditionHandler}
+          onCancel = {fermerFormulaireHandler}
           ajouterProfesseur = {ajouterProfesseur}
         />
       )}
