@@ -10,7 +10,7 @@ function Professeur({ professeur }) {
   return (
     <li className="user-item">
         <Card className="user-item__content">
-          <Link to={`/${professeur.id}/places`}>
+          <Link>
             <div className="user-item__image">
               <Avatar photo={professeur.photo} alt={professeur.nom + ", " + professeur.prenom} />
             </div>

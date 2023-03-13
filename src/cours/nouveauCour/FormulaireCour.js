@@ -40,16 +40,16 @@ const FormulaireCour = ({ajouterCour}) => {
       dateDebut: new Date(saisieDateDebut),
       dateFin: new Date(saisieDateFin),
     };
-    if(saisieTitre ==="" && saisieDiscipline ==="" && saisieNbMax  ==="" && saisieDateDebut ==="" && saisieDateFin ===""){
-      alert("Vous devez saisir toutes les champs")
-    }else if (saisieTitre ===""){
+    if(saisieTitre === "" && saisieDiscipline === "" && saisieNbMax  === "" && saisieDateDebut === "" && saisieDateFin === ""){
+      alert("Vous devez saisir les données")
+    }else if (saisieTitre === ""){
       alert("Vous devez saisir un Tire de cours")
-    }else if(saisieDiscipline ===""){
+    }else if(saisieDiscipline === ""){
       alert("Vous devez saisir une Discipline")
-    }else if(saisieNbMax ===""){
-      alert("Vous devez saisir un nombre d'etudiant")
-    }else if (saisieDateDebut ==="" || saisieDateFin ===""){
-      alert("Vous devez saisir une date")
+    }else if(saisieNbMax === ""){
+      alert("Vous devez saisir un nombre d'étudiant maximum")
+    }else if (saisieDateDebut === "" || saisieDateFin === ""){
+      alert("Vous devez saisir une date de début ET de fin")
     } else {
 
       ajouterCour(donneesCour);

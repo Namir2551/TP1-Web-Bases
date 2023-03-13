@@ -30,15 +30,15 @@ const FormulaireProf = ({ajouterProfesseur}) => {
       photo: "https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg",
       cours: [],
     };
-        if(saisieNom ==="" && saisiePrenom ===""){
-      alert("Vous devez saisir un Nom et Prenom")
-    }else if (saisieNom ===""){
+        if(saisieNom === "" && saisiePrenom ==="" && saisieDate ===""){
+      alert("Vous devez saisir les données")
+    }else if (saisieNom === ""){
       alert("Vous devez saisir un Nom")
-    }else if(saisiePrenom ===""){
+    }else if(saisiePrenom === ""){
       alert("Vous devez saisir un Prenom")
-    }else if(saisieDate ===""){
+    }else if(saisieDate === ""){
       alert("Vous devez saisir une Date")
-    } else {
+    }else {
       ajouterProfesseur(donneesProf);
       setSaisieNom('');
       setSaisiePrenom('');
