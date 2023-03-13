@@ -15,6 +15,12 @@ const NouveauCour = ({ajouterCour}) => {
     setEnEdition(false);
   };
 
+  const [filtreAnnee, setFiltreAnnee] = useState();
+
+  const filtrerChangeHandler = (selectedAnnee) => {
+    setFiltreAnnee(selectedAnnee);
+  };
+
   return (
     <div className='new-expense'>
       {!enEdition && (
@@ -26,9 +32,10 @@ const NouveauCour = ({ajouterCour}) => {
           ajouterCour = {ajouterCour}
         />
       )}
-      <FiltreSession>
-        selected={FiltreSession}
-      </FiltreSession>
+      <FiltreSession
+        selected = {filtreAnnee}
+        onChangementFiltre = {filtrerChangeHandler}
+      />
     </div>
   );
 };
