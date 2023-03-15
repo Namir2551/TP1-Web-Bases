@@ -43,7 +43,6 @@ const NouveauCour = ({ajouterCour,cours}) => {
       />
       <ListeCours 
         cours={anneeFiltrees}
-        
       />
     </div>
   );
