@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FormulaireEtudiant from './FormulaireEtudiant';
 import './NouveauEtudiant.css';
 
-const NouveauEtudiant = (props) => {
+const NouveauEtudiant = ({ajouterEtudiant}) => {
   const [enEdition, setEnEdition] = useState(false);
 
   const ouvrirFormulaireHandler = () => {
@@ -21,7 +21,8 @@ const NouveauEtudiant = (props) => {
       )}
       {enEdition && (
         <FormulaireEtudiant
-          onCancel={fermerFormulaireHandler}
+          onCancel={fermerFormulaireHandler} 
+          ajouterEtudiant = {ajouterEtudiant}
         />
       )}
     </div>

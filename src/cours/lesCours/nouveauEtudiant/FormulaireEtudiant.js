@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 
 import './FormulaireEtudiant.css';
 
-const FormulaireEtudiant = ({onCancel}) => {
+const FormulaireEtudiant = ({onCancel, ajouterEtudiant}) => {
   const [saisieNom, setSaisieNom] = useState('');
   const [saisiePrenom, setSaisiePrenom] = useState('');
   const [saisieNumAdmission, setSaisieNumAdmission] = useState('');
 
-
+  
   const changementNomHandler = (event) => {
     setSaisieNom(event.target.value);
   };
@@ -28,10 +28,22 @@ const FormulaireEtudiant = ({onCancel}) => {
       prenom: saisiePrenom,
       numAdmission: saisieNumAdmission,
     };
-    setSaisieNom('');
-    setSaisiePrenom('');
-    setSaisieNumAdmission('');
+    if(saisieNom === "" && saisiePrenom ==="" && saisieNumAdmission ===""){
+      alert("Vous devez saisir les données")
+    }else if (saisieNom === ""){
+      alert("Vous devez saisir un Nom")
+    }else if(saisiePrenom === ""){
+      alert("Vous devez saisir un Prenom")
+    }else if(saisieNumAdmission === ""){
+      alert("Vous devez saisir le numéro d'admission")
+    }else {
+      ajouterEtudiant(donneesEtudiant);
+      setSaisieNom('');
+      setSaisiePrenom('');
+      setSaisieNumAdmission('');
+    }
   };
+
 
   return (
     <form onSubmit={submitHandler}>
@@ -58,6 +70,8 @@ const FormulaireEtudiant = ({onCancel}) => {
             type='text'
             value={saisieNumAdmission}
             onChange={changementNumAdmissionHandler}
+            pattern="^[0-9]+$"
+            title="Le numéro d'admission doit contenir que des chiffres"
           />
         </div>
       </div>
