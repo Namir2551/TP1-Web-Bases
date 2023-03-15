@@ -44,10 +44,14 @@ function LesCours() {
         numAdmission: "8",
       },
     ]);
+
+    function ajouterEtudiant(nouveauEtudiant) {
+      setLesEtudiants(lesEtudiants.concat(nouveauEtudiant));
+    }
   
   return ( 
     <div>
-        <NouveauEtudiant/>
+        <NouveauEtudiant ajouterEtudiant={ajouterEtudiant}/>
         <h2>Les étudiants</h2>
         <ul>
             {lesEtudiants.map((etu) => (
