@@ -63,8 +63,8 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className='new-expense__controls'>
-        <div className='new-expense__control'>
+      <div className='NouveauCours__controls'>
+        <div className='NouveauCours__control'>
           <label>Titre</label>
           <input
             type='text'
@@ -72,7 +72,7 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
             onChange={changementTitreHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='NouveauCours__control'>
           <label>Discipline</label>
           <input
             type='text'
@@ -80,7 +80,7 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
             onChange={changementDisciplineHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='NouveauCours__control'>
           <label>Nombre d'étudiant maximum</label>
           <input
             type='text'
@@ -88,7 +88,7 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
             onChange={changementNbMaxHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='NouveauCours__control'>
           <label>Date de début</label>
           <input
             type='date'
@@ -98,7 +98,7 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
             onChange={changementDateDebutHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='NouveauCours__control'>
           <label>Date de fin</label>
           <input
             type='date'
@@ -109,7 +109,7 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
           />
         </div>
       </div>
-      <div className='new-expense__actions'>
+      <div className='NouveauCours__actions'>
         <button type="button" onClick={onCancel}>Annuler</button>
         <button type='submit'>Ajouter Cour</button>
       </div>

@@ -11,7 +11,7 @@ function Cours() {
         nbMaxEtu: "30",
         dateDebut: new Date(2023, 1, 22),
         dateFin: new Date(2023, 5, 27),
-        session: "H22"
+        session: "H23"
       },
       {
         id: "c2",
@@ -20,7 +20,7 @@ function Cours() {
         nbMaxEtu: "30",
         dateDebut: new Date(2023, 1, 23),
         dateFin: new Date(2023, 5, 25),
-        session: "H22"
+        session: "H23"
       },
       {
         id: "c3",
@@ -29,7 +29,7 @@ function Cours() {
         nbMaxEtu: "30",
         dateDebut: new Date(2023, 1, 22),
         dateFin: new Date(2023, 5, 24),
-        session: "A21"
+        session: "H23"
       },
     ]);
   

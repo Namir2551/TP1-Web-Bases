@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import Card from "../../shared/Card";
-import FiltreSession from "./FiltreSession";
+
 import "./Cours.css";
 
 function Cours({ key, titre, discipline }) {
   return (
-    <li className="user-item">
-        <Card className="user-item__content">
+    <li className="card-cours">
+        <Card className="card-cours__content">
           <Link to={`/cours/${key}`}>
-          <div className="user-item__info">
+          <div className="card-cours__info">
               <h2>{titre + " - " + discipline}</h2>
             </div>
           </Link>

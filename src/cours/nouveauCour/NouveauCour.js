@@ -5,7 +5,7 @@ import FormulaireCour from './FormulaireCour';
 import ListeCours from '../components/ListeCours';
 import './NouveauCour.css';
 
-const NouveauCour = ({ajouterCour, cours}) => {
+const NouveauCour = ({ajouterCour,cours}) => {
   const [enEdition, setEnEdition] = useState(false);
 
   const ouvrirFormulaireHandler = () => {
@@ -27,7 +27,7 @@ const NouveauCour = ({ajouterCour, cours}) => {
   });
 
   return (
-    <div className='new-expense'>
+    <div className='NouveauCours'>
       {!enEdition && (
         <button onClick={ouvrirFormulaireHandler}>Ajouter un nouveau Cours</button>
       )}
@@ -43,6 +43,7 @@ const NouveauCour = ({ajouterCour, cours}) => {
       />
       <ListeCours 
         cours={anneeFiltrees}
+        
       />
     </div>
   );

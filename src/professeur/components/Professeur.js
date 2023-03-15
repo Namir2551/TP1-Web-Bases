@@ -8,13 +8,13 @@ import "./Professeur.css";
 
 function Professeur({ professeur }) {
   return (
-    <li className="user-item">
-        <Card className="user-item__content">
+    <li className="card-prof">
+        <Card className="card-prof__content">
           <Link>
-            <div className="user-item__image">
+            <div className="card-prof__image">
               <Avatar photo={professeur.photo} alt={professeur.nom + ", " + professeur.prenom} />
             </div>
-            <div className="user-item__info">
+            <div className="card-prof__info">
               <h2>{professeur.nom + ", " + professeur.prenom}</h2>
               <ul>
                   {professeur.cours.map((cour) => (
