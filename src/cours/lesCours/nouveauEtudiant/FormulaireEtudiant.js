@@ -47,8 +47,8 @@ const FormulaireEtudiant = ({onCancel, ajouterEtudiant}) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className='new-expense__controls'>
-        <div className='new-expense__control'>
+      <div className='nouveau-etudiant__controls'>
+        <div className='nouveau-etudiant__control'>
           <label>Nom</label>
           <input
             type='text'
@@ -56,7 +56,7 @@ const FormulaireEtudiant = ({onCancel, ajouterEtudiant}) => {
             onChange={changementNomHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='nouveau-etudiant__control'>
           <label>Prenom</label>
           <input
             type='text'
@@ -64,7 +64,7 @@ const FormulaireEtudiant = ({onCancel, ajouterEtudiant}) => {
             onChange={changementPrenomHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='nouveau-etudiant__control'>
           <label>NumAdmission</label>
           <input
             type='text'
@@ -75,7 +75,7 @@ const FormulaireEtudiant = ({onCancel, ajouterEtudiant}) => {
           />
         </div>
       </div>
-      <div className='new-expense__actions'>
+      <div className='nouveau-etudiant__actions'>
         <button type="button" onClick={onCancel}>Annuler</button>
         <button type='submit'>Ajouter Etudiant</button>
       </div>

@@ -15,7 +15,7 @@ const NouveauProf = ({ajouterProfesseur}) => {
   };
 
   return (
-    <div className='new-expense'>
+    <div className='nouveau-prof'>
       {!enEdition && (
         <button onClick={ouvrirFormulaireHandler}>Ajouter un nouveau professeur</button>
       )}

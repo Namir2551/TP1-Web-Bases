@@ -48,8 +48,8 @@ const FormulaireProf = ({onCancel, ajouterProfesseur}) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className='new-expense__controls'>
-        <div className='new-expense__control'>
+      <div className='nouveau-prof__controls'>
+        <div className='nouveau-prof__control'>
           <label>Nom</label>
           <input
             type='text'
@@ -57,7 +57,7 @@ const FormulaireProf = ({onCancel, ajouterProfesseur}) => {
             onChange={changementNomHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='nouveau-prof__control'>
           <label>Prenom</label>
           <input
             type='text'
@@ -65,7 +65,7 @@ const FormulaireProf = ({onCancel, ajouterProfesseur}) => {
             onChange={changementPrenomHandler}
           />
         </div>
-        <div className='new-expense__control'>
+        <div className='nouveau-prof__control'>
           <label>Date d'embauche</label>
           <input
             type='date'
@@ -74,7 +74,7 @@ const FormulaireProf = ({onCancel, ajouterProfesseur}) => {
           />
         </div>
       </div>
-      <div className='new-expense__actions'>
+      <div className='nouveau-prof__actions'>
         <button type="button" onClick={onCancel}>Annuler</button>
         <button type='submit'>Ajouter Prof</button>
       </div>

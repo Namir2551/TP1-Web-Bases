@@ -1,10 +1,10 @@
-.expenses-filter {
+.session-filter {
     color: rgb(255, 255, 255);
     padding: 0 0rem;
 
   }
   
-  .expenses-filter__control {
+  .session-filter__control {
     display: flex;
     width: 100%;
     align-items: center;
@@ -12,12 +12,12 @@
     margin: 1rem 0;
   }
   
-  .expenses-filter label {
+  .session-filter label {
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
   
-  .expenses-filter select {
+  .session-filter select {
     font: inherit;
     font-weight: bold;
     border-radius: 6px;

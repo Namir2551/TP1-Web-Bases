@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import Card from "../../shared/Card";
 import "./Cours.css";
 
-function Cours({ id, titre}) {
+function Cours({ id, titre }) {
   return (
     <li className="card-cours">
         <Card className="card-cours__content">

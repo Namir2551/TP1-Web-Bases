@@ -1,4 +1,4 @@
-.new-expense__controls {
+.nouveau-etudiant__controls {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -6,14 +6,14 @@
   text-align: left;
 }
 
-.new-expense__control label {
+.nouveau-etudiant__control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
   color: white;
 }
 
-.new-expense__control input {
+.nouveau-etudiant__control input {
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
@@ -22,6 +22,6 @@
   max-width: 100%;
 }
 
-.new-expense__actions {
+.nouveau-etudiant__actions {
   text-align: right;
 }

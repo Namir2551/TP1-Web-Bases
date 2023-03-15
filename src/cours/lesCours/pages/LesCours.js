@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NouveauEtudiant from "../nouveauEtudiant/NouveauEtudiant";
 
+import './LesCours.css'
+
 function LesCours() {
     const [lesEtudiants, setLesEtudiants] = useState([
       {
@@ -52,12 +54,14 @@ function LesCours() {
   return ( 
     <div>
         <NouveauEtudiant ajouterEtudiant={ajouterEtudiant}/>
-        <h2>Les étudiants</h2>
-        <ul>
-            {lesEtudiants.map((etu) => (
-                <li>{etu.prenom + " " + etu.nom} </li>
-            ))}
-        </ul>
+        <div className="paragraphe-center">
+            <h2>Les étudiants</h2>
+            <ul>
+                {lesEtudiants.map((etu) => (
+                    <li className="paragraphe-center">{etu.prenom + " " + etu.nom} </li>
+                ))}
+            </ul>
+        </div>
     </div>
     );
 };

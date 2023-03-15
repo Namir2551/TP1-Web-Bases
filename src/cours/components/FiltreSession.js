@@ -8,8 +8,8 @@ const FiltreSession = (props) => {
   };
 
   return (
-    <div className='expenses-filter'>
-      <div className='expenses-filter__control'>
+    <div className='session-filter'>
+      <div className='session-filter__control'>
         <label>Filtrer par sessions</label>
         <select value={props.selected} onChange={menuDeroulantHandler}>
           <option value='H23'>Hiver 2023</option>
