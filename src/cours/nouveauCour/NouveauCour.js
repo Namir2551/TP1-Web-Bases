@@ -27,7 +27,7 @@ const NouveauCour = ({ajouterCour,cours}) => {
   });
 
   return (
-    <div className='new-expense'>
+    <div className='NouveauCours'>
       {!enEdition && (
         <button onClick={ouvrirFormulaireHandler}>Ajouter un nouveau Cours</button>
       )}
