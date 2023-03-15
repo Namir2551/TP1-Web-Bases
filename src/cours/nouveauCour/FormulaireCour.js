@@ -39,6 +39,7 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
       nbMaxEtu: saisieNbMax,
       dateDebut: new Date(saisieDateDebut),
       dateFin: new Date(saisieDateFin),
+      session: "H23"
     };
     if(saisieTitre === "" && saisieDiscipline === "" && saisieNbMax  === "" && saisieDateDebut === "" && saisieDateFin === ""){
       alert("Vous devez saisir les données")
@@ -83,7 +84,9 @@ const FormulaireCour = ({onCancel, ajouterCour}) => {
         <div className='NouveauCours__control'>
           <label>Nombre d'étudiant maximum</label>
           <input
-            type='text'
+            type='number'
+            min='1'
+            step='1'
             value={saisieNbMax}
             onChange={changementNbMaxHandler}
           />

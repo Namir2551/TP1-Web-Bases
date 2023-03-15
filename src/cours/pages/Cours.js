@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ListeCours from "../components/ListeCours";
 import NouveauCour from "../nouveauCour/NouveauCour";
 
 function Cours() {

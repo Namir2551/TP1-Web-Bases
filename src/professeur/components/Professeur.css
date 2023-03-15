@@ -37,7 +37,9 @@
     color: white;
   }
   
-  .card-prof:hover h2,
+  .card-prof:hover h2 {
+    color: white;
+  }
   .card-prof:active h2,
   .card-prof:hover h3,
   .card-prof:active h3 {
