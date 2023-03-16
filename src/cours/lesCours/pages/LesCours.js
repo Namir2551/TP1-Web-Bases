@@ -48,7 +48,18 @@ function LesCours() {
     ]);
 
     function ajouterEtudiant(nouveauEtudiant) {
-      setLesEtudiants(lesEtudiants.concat(nouveauEtudiant));
+      
+      let existe = false
+
+        for (let i = 0; i < lesEtudiants.length; i++) {
+            if (lesEtudiants[i].numAdmission === nouveauEtudiant.numAdmission) {
+                  alert("L'étudiant existe déjà!")
+                  existe = true
+              }
+        }
+        
+        if(existe === false)
+        setLesEtudiants(lesEtudiants.concat(nouveauEtudiant));
     }
   
   return ( 
