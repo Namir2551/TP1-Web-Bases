@@ -57,7 +57,7 @@ function LesCours() {
                   existe = true
               }
         }
-        
+
         if(existe === false)
         setLesEtudiants(lesEtudiants.concat(nouveauEtudiant));
     }
@@ -65,11 +65,11 @@ function LesCours() {
   return ( 
     <div>
         <NouveauEtudiant ajouterEtudiant={ajouterEtudiant}/>
-        <div className="paragraphe-center">
+        <div className="titre">
             <h2>Les étudiants</h2>
             <ul>
                 {lesEtudiants.map((etu) => (
-                    <li className="paragraphe-center">{etu.prenom + " " + etu.nom} </li>
+                    <li className="etudiant">{etu.prenom + " " + etu.nom} </li>
                 ))}
             </ul>
         </div>
